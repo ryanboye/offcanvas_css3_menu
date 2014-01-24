@@ -1,4 +1,6 @@
-$background_color: #fff;
+$background_color: #DDDBD2;
+$nav_bg_color: #fff;
+$collapsed_nav_bg_color: #ededed;
 $font_family: 'Open Sans';
 $font_size: 12px;
 $transition_speed: 2;
@@ -6,11 +8,37 @@ $transition_type: slide;
 
 
 
-/* OUR STYLES */
+/* STYLES */
+
 body {
-	background: #efefef;
+	background: $background_color;
+	margin:0;
+}
+nav {
+	height: 60px;
+	ul {
+		-webkit-margin-before: 0px;
+		-webkit-margin-after: 0px;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start: 40px;
+		list-style: none;
+	}
+}
+a {
+	text-decoration: none;
 }
 
-
 /* FUNCTIONAL CSS */
+
+nav {
+	width: 100%;
+	background: $nav_bg_color;
+	ul {
+		li {
+			display: inline;
+		}
+	
+	}
+}
 
