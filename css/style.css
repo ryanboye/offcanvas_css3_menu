@@ -3,6 +3,9 @@ body {
   background: #dddbd2;
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 nav {
   height: 60px; }
   nav ul {
@@ -11,14 +14,16 @@ nav {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
-    list-style: none; }
-
-a {
-  text-decoration: none; }
+    list-style: none;
+    line-height: 3.7em; }
+    nav ul li {
+      margin: 0 10px; }
+      nav ul li a {
+        color: #616161; }
 
 /* FUNCTIONAL CSS */
 nav {
   width: 100%;
-  background: white; }
+  background: rgba(255, 255, 255, 0.5); }
   nav ul li {
     display: inline; }
