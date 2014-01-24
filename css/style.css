@@ -22,8 +22,21 @@ nav {
         color: #616161; }
 
 /* FUNCTIONAL CSS */
+header {
+  position: relative; }
+
 nav {
   width: 100%;
   background: rgba(255, 255, 255, 0.5); }
   nav ul li {
     display: inline; }
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+  header ul {
+    position: absolute;
+    left: -200px;
+    width: 160px;
+    background: #888383; }
+    header ul li {
+      display: block; } }

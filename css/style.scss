@@ -1,6 +1,6 @@
 $background_color: #DDDBD2;
 $nav_bg_color: rgba(255, 255, 255, 0.5);
-$collapsed_nav_bg_color: #ededed;
+$collapsed_nav_bg_color: #888383;
 $font_family: 'Open Sans';
 $font_size: 12px;
 $transition_speed: 2;
@@ -37,7 +37,9 @@ nav {
 }
 
 /* FUNCTIONAL CSS */
-
+header {
+	position: relative;
+}
 nav {
 	width: 100%;
 	background: $nav_bg_color;
@@ -49,3 +51,18 @@ nav {
 	}
 }
 
+/* MEDIA QUERIES */
+
+@media(max-width: 800px){
+	header {
+		ul {
+			position: absolute;
+			left: -200px;
+			width: 160px;
+			background: $collapsed_nav_bg_color;
+			li {
+				display: block;
+			}
+		}
+	}
+}
