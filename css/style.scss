@@ -1,8 +1,16 @@
-.css{}
+$background_color: #fff;
+$font_family: 'Open Sans';
+$font_size: 12px;
+$transition_speed: 2;
+$transition_type: slide;
 
-$background_color:;
-$text_size:;
-$font_family:;
-$font_size:;
-$transition_speed:;
-$transition_type:;
+
+
+/* OUR STYLES */
+body {
+	background: #efefef;
+}
+
+
+/* FUNCTIONAL CSS */
+
