@@ -25,7 +25,8 @@
 /* STYLES */
 body {
   background: #dddbd2;
-  margin: 0; }
+  margin: 0;
+  font-family: "Open Sans"; }
 
 a {
   text-decoration: none; }
