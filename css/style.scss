@@ -73,6 +73,15 @@ nav {
 /* FUNCTIONAL CSS */
 header {
 	position: relative;
+	.icon-menu {
+		float: left;
+		line-height: 3em;
+		font-size: 20px;
+		width: 55px;
+		text-align: center;
+		display: none;
+		color: #fff;
+	}
 }
 nav {
 	width: 100%;
@@ -97,6 +106,9 @@ nav {
 			li {
 				display: block;
 			}
+		}
+		.icon-menu {
+			display: block;
 		}
 	}
 }

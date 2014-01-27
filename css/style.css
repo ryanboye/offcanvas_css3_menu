@@ -49,6 +49,14 @@ nav {
 /* FUNCTIONAL CSS */
 header {
   position: relative; }
+  header .icon-menu {
+    float: left;
+    line-height: 3em;
+    font-size: 20px;
+    width: 55px;
+    text-align: center;
+    display: none;
+    color: #fff; }
 
 nav {
   width: 100%;
@@ -64,4 +72,6 @@ nav {
     width: 160px;
     background: #888383; }
     header ul li {
-      display: block; } }
+      display: block; }
+  header .icon-menu {
+    display: block; } }
