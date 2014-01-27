@@ -1,24 +1,64 @@
-// Configuration
+(function(window, document, undefined)
+{
 
-// Define the ID of your main body content, this is what
-// you want to put on your container or body.
+	function foo(){
+		// Define the ID of your main body content, this is what
+		// you want to put on your container or body.
 
+		var push_content_id = "pushcontent";
+		var off_canvas_id = "offcanvas";
+		var menu_button_id = "offcanvas_toggle";
 
-(function(window, undefined){
+		var menu = document.getElementById(off_canvas_id);
+		var content = document.getElementById(push_content_id);
+		var toggle = document.getElementById(menu_button_id);
+		
+		// Helper functions
+		function nav(){
+		var nav_open = false;
 
-	var push_content = 'pushcontent';
-	var off_canvas = 'offcanvas';
+		var addClass = function(element, classname){
+			if (!hasClass(element, classname)) {
+				element.className += ' ' + classname;
+			}
+		};
 
-	var menu = $(off_canvas);
-	var content = $(push_content);
+		var hasClass = function(element, classname){
+	    return (' ' + element.className + ' ').indexOf(' ' + classname + ' ') !== -1;
+	  };
 
-	// Helper functions
+		var removeClass = function(element, classname){
+			element.className = element.className.replace(' ' + classname, '');
+		};
 
-	var addClass = function(element, classname){
-		element.className += ' ' + classname;
+		var open_menu = function(){
+			if (nav_open) {
+	      return;
+	   }
+			addClass(document.body, "transition");
+			if(!nav_open){
+				nav_open = true;
+			}
+		};
+		
+		var close_menu = function(){
+			removeClass(document.body, "transition");
+			if (nav_open){
+				nav_open = false;
+			}
+		};
+
+		var toggle_menu = function(){
+			nav_open ? close_menu() : open_menu();
+		};
+
+		toggle.addEventListener('click', function(){
+			event.preventDefault();
+			toggle_menu();
+		}, false);
+		}
+		nav();
 	}
+	window.addEventListener('DOMContentLoaded', foo);
 
-	var removeClass = function(element, classname){
-		element.className = element.className.replace(' ' + classname + ' ', ' ');
-	}
-})();
+})(window, window.document);

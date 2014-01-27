@@ -64,6 +64,13 @@ nav {
   nav ul li {
     display: inline; }
 
+.transition {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out; }
+
 /* MEDIA QUERIES */
 @media (max-width: 800px) {
   header ul {
